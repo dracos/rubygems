@@ -50,7 +50,7 @@ class Gem::PathSupport
 
     gem_path = []
 
-    # FIX: I can't tell wtf this is doing.
+    # If nil/false passed in, set to GEM_PATH if set, nil otherwise
     gpaths ||= (ENV['GEM_PATH'] || "").empty? ? nil : ENV["GEM_PATH"]
 
     if gpaths
